@@ -7,6 +7,9 @@ public class SceneChanger : MonoBehaviour
 {
     public static void ChangeScene(string scene)
     {
+        if (PauseMenu.gameIsPaused)
+            Time.timeScale = 1f;
+
         SceneManager.LoadScene(scene);
     }
 }
