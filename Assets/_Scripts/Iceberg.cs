@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Iceberg : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject iceberg;
+    public float speed;
+    public float length;
+    public float minHeight;
+    public float maxHeight;
+
     void Start()
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        float y = Mathf.PingPong(Time.time * speed, length) * maxHeight - minHeight;
+        iceberg.transform.position = new Vector3(0, y, 0);
     }
 }

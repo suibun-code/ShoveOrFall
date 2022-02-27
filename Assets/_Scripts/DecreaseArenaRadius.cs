@@ -22,8 +22,8 @@ public class DecreaseArenaRadius : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        arenaScaleChange = new Vector3(shrinkRate * Time.deltaTime, 0.0f, shrinkRate * Time.deltaTime);
-        arena.transform.localScale -= arenaScaleChange;
+        //arenaScaleChange = new Vector3(shrinkRate * Time.deltaTime, 0.0f, shrinkRate * Time.deltaTime);
+        //arena.transform.localScale -= arenaScaleChange;
 
         materialScaleChange = new Vector2(originalMaterialTiling.x * transform.localScale.x, originalMaterialTiling.y * transform.localScale.z);
         material.mainTextureScale = materialScaleChange;
