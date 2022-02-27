@@ -75,7 +75,7 @@ Material:
     - _IntersectionWaterBlend: 1
     - _LightingHardness: 0
     - _LightingSmoothness: 1
-    - _NormalsStrength: 0.29
+    - _NormalsStrength: 0
     - _PlanarReflectionFresnel: 2.25
     - _PlanarReflectionStrength: 0.85
     - _RefractionStrength: 0.017
@@ -113,7 +113,7 @@ Material:
     - _WaterColorUnderwater: {r: 0.2039216, g: 0.3098039, b: 0.5176471, a: 0}
     - _WaveColor: {r: 0.14901961, g: 0.14901961, b: 0.14901961, a: 0}
     - _WaveDirections: {r: 0.067, g: 0.64, b: 1, a: 0.33}
-    - _WaveVisuals: {r: 0.11, g: 7.9, b: 1, a: 0}
+    - _WaveVisuals: {r: 0.215, g: 7.9, b: 1, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3884871068361501984
 MonoBehaviour:
