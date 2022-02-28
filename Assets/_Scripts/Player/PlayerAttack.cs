@@ -30,11 +30,11 @@ public class PlayerAttack : MonoBehaviour
 
             Vector3 direction = enemyRB.transform.position - transform.position;
             enemyRB.AddForceAtPosition(direction.normalized * forceAmount, transform.position, ForceMode.Impulse);
-
-            canAttack = false;
-            swordImage.color = Color.red;
-            StartCoroutine(AttackCooldown());
         }
+
+        canAttack = false;
+        swordImage.color = Color.red;
+        StartCoroutine(AttackCooldown());
     }
 
     private void OnTriggerEnter(Collider other)

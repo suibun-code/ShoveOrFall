@@ -60,6 +60,7 @@ MonoBehaviour:
   swordImage: {fileID: 0}
   forceAmount: 10
   collidedGameObjects: []
+  attackCooldown: 1.75
   canAttack: 1
 --- !u!1 &4858322777689081581
 GameObject:
