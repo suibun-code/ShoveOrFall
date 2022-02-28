@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float speed = 7f;
+
+    public GameObject player;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, (speed * Time.deltaTime));
     }
 }
