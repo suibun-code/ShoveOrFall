@@ -57,8 +57,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c37d84a7f9ea04d8383a27e5f2782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swordImage: {fileID: 0}
   forceAmount: 10
   collidedGameObjects: []
+  canAttack: 1
 --- !u!1 &4858322777689081581
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  jumpForce: 3
+  jumpForce: 7
   ableToJump: 1
 --- !u!114 &5232542361118881335
 MonoBehaviour:
@@ -232,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca65b7a12b5c4e439c72cf5baabb47f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arenaTimeCanvas: {fileID: 0}
   currentNoArenaTimeText: {fileID: 0}
   currentNoArenaTime: 3
   maxNoArenaTime: 3

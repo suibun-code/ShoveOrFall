@@ -8,9 +8,9 @@ public class DeathBox : MonoBehaviour
     {
         Debug.Log("Collision!" + other.gameObject.name);
 
-        if (!other.gameObject.CompareTag("Player")) 
-            return;
-
-        SceneChanger.ChangeScene("MainMenu");
+        if (other.gameObject.CompareTag("Player"))
+            SceneChanger.ChangeScene("Lost");
+        else if (other.gameObject.CompareTag("Enemy"))
+            SceneChanger.ChangeScene("Win");
     }
 }

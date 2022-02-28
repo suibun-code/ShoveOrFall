@@ -5,6 +5,7 @@ using TMPro;
 
 public class PlayerArenaChecker : MonoBehaviour
 {
+    public GameObject arenaTimeCanvas;
     public TextMeshProUGUI currentNoArenaTimeText;
 
     [SerializeField] float currentNoArenaTime = 3.0f;
@@ -13,13 +14,18 @@ public class PlayerArenaChecker : MonoBehaviour
 
     void Update()
     {
+        if (currentNoArenaTime < 2.8f)
+            arenaTimeCanvas.SetActive(true);
+        else
+            arenaTimeCanvas.SetActive(false);
+
         if (!onArena)
             currentNoArenaTime -= Time.deltaTime;
 
         if (currentNoArenaTime < 0)
         {
             Debug.Log("currentNoArenaTime less than 0. Changing scene.");
-            SceneChanger.ChangeScene("MainMenu");
+            SceneChanger.ChangeScene("Lost");
         }
 
         currentNoArenaTimeText.text = currentNoArenaTime.ToString("F2");
