@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     Vector2 inputVector = Vector2.zero;
     Vector3 moveDirection = Vector3.zero;
 
+    public bool canMove = true;
+    public float cantMoveCooldown = 0.7f;
+
     [SerializeField] float speed = 10f;
 
     [SerializeField] float jumpForce = 5f;
@@ -22,6 +25,12 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        if (!canMove)
+        {
+            StartCoroutine(CantMoveCooldown());
+            return;
+        }
+
         moveDirection = transform.forward * inputVector.y + transform.right * inputVector.x;
 
         Vector3 movementDirection = moveDirection * (speed * Time.deltaTime);
@@ -48,5 +57,11 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
 
         ableToJump = true;
+    }
+
+    IEnumerator CantMoveCooldown()
+    {
+        yield return new WaitForSeconds(cantMoveCooldown);
+        canMove = true;
     }
 }

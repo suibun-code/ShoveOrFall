@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordImage: {fileID: 0}
-  forceAmount: 10
+  forceAmount: 20
   collidedGameObjects: []
   attackCooldown: 1.75
   canAttack: 1
@@ -220,6 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a43cf6b6b2efe4bb3be383a68b2f6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 1
+  cantMoveCooldown: 0.7
   speed: 10
   jumpForce: 7
   ableToJump: 1

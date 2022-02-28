@@ -9,10 +9,13 @@ public class PlayerAttack : MonoBehaviour
     public Image swordImage;
 
     BoxCollider boxCollider;
-    public float forceAmount = 20f;
+    public float forceAmount = 10f;
     public List<GameObject> collidedGameObjects;
     public float attackCooldown = 1.75f;
     public bool canAttack = true;
+
+    public ParticleSystem explosion;
+    public AudioSource explosionSFX;
 
     void Start()
     {
@@ -30,11 +33,15 @@ public class PlayerAttack : MonoBehaviour
 
             Vector3 direction = enemyRB.transform.position - transform.position;
             enemyRB.AddForceAtPosition(direction.normalized * forceAmount, transform.position, ForceMode.Impulse);
+            gb.GetComponent<Enemy>().canMove = false;
         }
 
         canAttack = false;
         swordImage.color = Color.red;
         StartCoroutine(AttackCooldown());
+
+        explosion.Play();
+        explosionSFX.Play();
     }
 
     private void OnTriggerEnter(Collider other)
