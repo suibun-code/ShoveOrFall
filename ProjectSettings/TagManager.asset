@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DeathBox
   - Arena
+  - Enemy
   layers:
   - Default
   - TransparentFX
